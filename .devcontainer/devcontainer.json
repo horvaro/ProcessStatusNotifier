@@ -13,7 +13,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "wget https://dot.net/v1/dotnet-install.sh; bash dotnet-install.sh -c 6.0; echo 'export PATH=\"$PATH:/home/$USER/.dotnet/\"' >> ~/.bashrc; rm -f dotnet-install.sh",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
